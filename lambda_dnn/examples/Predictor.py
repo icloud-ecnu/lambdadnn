@@ -3,16 +3,14 @@ import math
 import time
 import random
 
-def f_l(m,n,B_f_s,B_f_p):
+def f_l(m,n,B_f_s,B_f_p,R):
     k= ((n_t //n) //b_l_f) * e
-    R = 0.03 * m + 5.6  #mobilenet
     T_pre = (d_t / (n * B_f_s) + k * (b_l_f / R + (2 * d_m) / B_f_p)) 
     cost = (((m/1024)*n*0.0000166667+2.6*10**(-5))*T_pre)
     return  T_pre,cost
 #fix global batch size, and  b_l_f * n>b_g_max
-def f_g(m,n,B_f_s,B_f_p):
+def f_g(m,n,B_f_s,B_f_p,R):
     k= (n_t //b_g_max) * e
-    R = 0.03 * m + 5.6
     T_pre = (d_t / (n * B_f_s) + k * (b_g_max / (n*R)+ (2 * d_m) / B_f_p)) #given global batch size
     cost = (((m/1024)*n*0.0000166667+2.6*10**(-5))*T_pre)
     return  T_pre,cost
@@ -25,7 +23,6 @@ def lambdadnn(T_o):
     B_f_p = 80
     if n_divide>=B_pmax//B_f_p: # only train with fixed local batch size is enough
         for m in range(min_memory, 3072, 64):
-            R = 0.03 * m + 5.6
             if m < 1792:
                 B_f_s = 0.002228 * m + 16.12  # bandwidth of s3
             else:
@@ -47,7 +44,6 @@ def lambdadnn(T_o):
                     continue
     if n_divide < B_pmax // B_f_p:
         for m in range(min_memory, 3072, 64):
-            R = 0.03 * m + 5.6
             if m < 1792:
                 B_f_s = 0.002228 * m + 16.12  # bandwidth of s3
             else:
