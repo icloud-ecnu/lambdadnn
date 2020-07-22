@@ -23,10 +23,6 @@ def lambdadnn(T_o):
     B_f_p = 80
     if n_divide>=B_pmax//B_f_p: # only train with fixed local batch size is enough
         for m in range(min_memory, 3072, 64):
-            if m < 1792:
-                B_f_s = 0.002228 * m + 16.12  # bandwidth of s3
-            else:
-                B_f_s = 0.002228 * 1792 + 16.12
             nlow = math.ceil((1 / T_o) * (d_t / B_f_s + (n_t * e) / R + (2 * d_m * n_t * e) / (b_l_f * B_f_p)))
             n_upp = math.floor(B_pmax//B_f_p)
             for n in range(nlow, n_upp + 1):
@@ -44,10 +40,6 @@ def lambdadnn(T_o):
                     continue
     if n_divide < B_pmax // B_f_p:
         for m in range(min_memory, 3072, 64):
-            if m < 1792:
-                B_f_s = 0.002228 * m + 16.12  # bandwidth of s3
-            else:
-                B_f_s = 0.002228 * 1792 + 16.12
             nlow_bl = math.ceil((1 / T_o) * (d_t / B_f_s + (n_t * e) / R + (2 * d_m * n_t * e) / (b_l_f * B_f_p)))
             #print("nlow_bl=",nlow_bl)
             if nlow_bl >= n_divide:  # can not training if fix local batchs size
