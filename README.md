@@ -8,7 +8,7 @@ an appropriate amount of memory.
 ## Modeling Makespan of Parallel Stages for a DAG-style Job
 In general, the DNN model requires a number of iterations (denoted by k) to converge to an objective training loss value. Accordingly, the DDNN training
 time T can be calculated by summing up the loading time, and the computation time, as well as the communication time, which is given by
-<div align=center><img width="250" height="50" src="https://github.com/icloud-ecnu/lambdadnn/blob/master/images/eq-T.png"/></div>
+<div align=center><img width="350" height="50" src="https://github.com/icloud-ecnu/lambdadnn/blob/master/images/eq-T.png"/></div>
 The loading time is calculated as
 <div align=center><img width="150" height="50" src="https://github.com/icloud-ecnu/lambdadnn/blob/master/images/eq-Tload.png"/></div>
 Given n provisioned functions, we estimate the computation time tcomp of model gradients as
