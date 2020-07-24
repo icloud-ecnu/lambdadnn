@@ -1,7 +1,7 @@
 # λDNN: Achieving Predictable Distributed DNN Training with Serverless Architectures
 λDNN is a cost-efficient function resource provisioning framework to minimize the monetary cost and guarantee the performance for DDNN training workloads in serverless platforms.
 ## Overview of λDNN
-λDNN framework running on AWS Lambda and comprises two pieces of modules: a training performance predictor and a function resource provisioner.To guarantee the objective DDNN training time, the resource provisioner further identifies the cost-efficient serverless function resource provisioning plan. Once the cost-efficient resource provisioning plan is determined, the function allocator finally sets up a number of functions with
+λDNN framework running on AWS Lambda and comprises two pieces of modules: a training performance predictor and a function resource provisioner. To guarantee the objective DDNN training time, the resource provisioner further identifies the cost-efficient serverless function resource provisioning plan. Once the cost-efficient resource provisioning plan is determined, the function allocator finally sets up a number of functions with
 an appropriate amount of memory.
 <div align=center><img width="550" height="300" src="https://github.com/icloud-ecnu/lambdadnn/blob/master/images/implementation.png"/></div>
 
@@ -11,7 +11,7 @@ time T can be calculated by summing up the loading time, and the computation tim
 <div align=center><img width="200" height="30" src="https://github.com/icloud-ecnu/lambdadnn/blob/master/images/eq-T.png"/></div>
 The loading time is calculated as
 <div align=center><img width="120" height="50" src="https://github.com/icloud-ecnu/lambdadnn/blob/master/images/eq-Tload.png"/></div>
-Given n provisioned functions, we estimate the computation time tcomp of model gradients as
+Given n provisioned functions, the computation time tcomp of model gradients is defined as
 <div align=center><img width="140" height="50" src="https://github.com/icloud-ecnu/lambdadnn/blob/master/images/eq-Tcomp.png"/></div>
 The data communication time is calculated as
 <div align=center><img width="120" height="50" src="https://github.com/icloud-ecnu/lambdadnn/blob/master/images/eq-Tcomm.png"/></div>
