@@ -1,4 +1,4 @@
-# $\lambda$DNN introduction
+# \lambda DNN introduction
 
 # Publication
 
