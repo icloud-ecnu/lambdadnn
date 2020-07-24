@@ -7,7 +7,7 @@ an appropriate amount of memory.
 ## Modeling Makespan of Parallel Stages for a DAG-style Job
 In general, the DNN model requires a number of iterations (denoted by k) to converge to an objective training loss value. Accordingly, the DDNN training
 time T can be calculated by summing up the loading time, and the computation time, as well as the communication time, which is given by
-<div align=center><img width="150" height="100" src="https://github.com/icloud-ecnu/lambdadnn/blob/master/images/eq-T.png"/></div>
+<div align=center><img width="150" height="60" src="https://github.com/icloud-ecnu/lambdadnn/blob/master/images/eq-T.png"/></div>
 The loading time is calculated as
 <div align=center><img width="150" height="50" src="https://github.com/icloud-ecnu/lambdadnn/blob/master/images/eq-Tload.png"/></div>
 Given n provisioned functions, we estimate the computation time tcomp of model gradients as
@@ -16,6 +16,6 @@ The data communication time is calculated as
 <div align=center><img width="150" height="50" src="https://github.com/icloud-ecnu/lambdadnn/blob/master/images/eq-Tcomm.png"/></div>
 The objective is to minimize the monetary cost of provisioned function resources, while guaranteeing the performance of DDNN training
 workloads. The optimization problem is formally defined as
-<div align=center><img width="380" height="100" src="https://github.com/icloud-ecnu/lambdadnn/blob/master/images/eq-C.png"/></div>
+<div align=center><img width="380" height="120" src="https://github.com/icloud-ecnu/lambdadnn/blob/master/images/eq-C.png"/></div>
 
 
