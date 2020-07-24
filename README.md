@@ -14,7 +14,7 @@ The loading time is calculated as
 Given n provisioned functions, we estimate the computation time tcomp of model gradients as
 <div align=center><img width="150" height="50" src="https://github.com/icloud-ecnu/lambdadnn/blob/master/images/eq-Tcomp.png"/></div>
 The data communication time is calculated as
-<div align=center><img width="150" height="50" src="https://github.com/icloud-ecnu/lambdadnn/blob/master/images/eq-Tcomm.png"/></div>
+<div align=center><img width="100" height="70" src="https://github.com/icloud-ecnu/lambdadnn/blob/master/images/eq-Tcomm.png"/></div>
 The objective is to minimize the monetary cost of provisioned function resources, while guaranteeing the performance of DDNN training
 workloads. The optimization problem is formally defined as
 <div align=center><img width="300" height="100" src="https://github.com/icloud-ecnu/lambdadnn/blob/master/images/eq-C.png"/></div>
