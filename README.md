@@ -19,4 +19,7 @@ The objective is to minimize the monetary cost of provisioned function resources
 workloads. The optimization problem is formally defined as
 <div align=center><img width="300" height="100" src="https://github.com/icloud-ecnu/lambdadnn/blob/master/images/eq-C.png"/></div>
 
+## Publication
+Fei Xu, Yiling Qin, Li Chen, Zhi Zhou, Fangming Liu, “λDNN: Achieving Predictable Distributed DNN Training with Serverless Architectures,” to appeared in IEEE Transactions on Computers, 2021.
+
 
