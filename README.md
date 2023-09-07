@@ -20,6 +20,17 @@ workloads. The optimization problem is formally defined as
 <div align=center><img width="300" height="100" src="https://github.com/icloud-ecnu/lambdadnn/blob/master/images/eq-C.png"/></div>
 
 ## Publication
-Fei Xu, Yiling Qin, Li Chen, Zhi Zhou, Fangming Liu, “λDNN: Achieving Predictable Distributed DNN Training with Serverless Architectures,” IEEE Transactions on Computers, 2022, 71(2): 450-463. DOI:10.1109/TC.2021.3054656.
+Fei Xu, Yiling Qin, Li Chen, Zhi Zhou, Fangming Liu, “[λDNN: Achieving Predictable Distributed DNN Training with Serverless Architectures](https://ieeexplore.ieee.org/document/9336272),” IEEE Transactions on Computers, 2022, 71(2): 450-463. DOI:10.1109/TC.2021.3054656.
 
-
+```
+@article{xu2021lambdadnn,
+  title={$\lambda$dnn: Achieving predictable distributed DNN training with serverless architectures},
+  author={Xu, Fei and Qin, Yiling and Chen, Li and Zhou, Zhi and Liu, Fangming},
+  journal={IEEE Transactions on Computers},
+  volume={71},
+  number={2},
+  pages={450--463},
+  year={2021},
+  publisher={IEEE}
+}
+```
